@@ -65,7 +65,7 @@ A production-grade **Retail Reward Points System** built with Spring Boot 3 that
 ## 🏗 Architecture
 
 The application follows **Clean Architecture** principles with clear separation of concerns
-
+```
 ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
 │ Controller │────▶│ Service │────▶│ Repository │
 │ (REST API) │ │ (Business Logic│ │ (Data Access) │
@@ -76,7 +76,7 @@ The application follows **Clean Architecture** principles with clear separation 
 │ DTO │ │ Validation │ │ Entity │
 │ (Data Transfer)│ │ Rules │ │ (JPA Model) │
 └─────────────────┘ └─────────────────┘ └─────────────────┘
-
+```
 
 ### Layer Responsibilities
 
@@ -95,7 +95,7 @@ The application follows **Clean Architecture** principles with clear separation 
 ## 📊 Business Rules
 
 ### Earning Rules
-
+```
 ┌─────────────────────────────────────────────────┐
 │ EARNING RULES │
 ├─────────────────────────────────────────────────┤
@@ -105,9 +105,9 @@ The application follows **Clean Architecture** principles with clear separation 
 │ • Points earned only after successful purchase │
 │ • Zero or negative billAmount is invalid │
 └─────────────────────────────────────────────────┘
-
+```
 ### Redemption Rules
-
+```
 ┌─────────────────────────────────────────────────┐
 │ REDEMPTION RULES │
 ├─────────────────────────────────────────────────┤
@@ -129,7 +129,7 @@ The application follows **Clean Architecture** principles with clear separation 
 │ • Sorted by transactionDate ascending │
 │ • Shows: type, points, balanceAfter │
 └─────────────────────────────────────────────────┘
-
+```
 
 ---
 
@@ -151,6 +151,7 @@ The application follows **Clean Architecture** principles with clear separation 
 ### Database Schema
 
 ER - DIAGRAM :
+```
 ┌─────────────────┐       ┌─────────────────┐
 │    customers    │       │    purchases    │
 ├─────────────────┤       ├─────────────────┤
@@ -174,7 +175,7 @@ ER - DIAGRAM :
 │ points_balance_after│                      │
 │ transaction_date │                         │
 └─────────────────┘─────────────────────────┘
-
+```
 ### Prerequisites
 
 👉 Java 17 LTS or higher
@@ -217,7 +218,8 @@ On first run, the application automatically creates:
 ⭐ Customer 2: Jane Smith (750 points)
 
  ### Project Structure
- retail-reward-points-system/
+ ```
+ Reward-Sysytem/
 ├── src/
 │   ├── main/
 │   │   ├── java/
@@ -266,6 +268,7 @@ On first run, the application automatically creates:
 ├── pom.xml
 ├── README.md
 └── mvnw
+```
 
 ### LICENSE 
 
