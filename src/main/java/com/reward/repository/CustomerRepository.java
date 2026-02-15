@@ -1,0 +1,16 @@
+// src/main/java/com/reward/repository/CustomerRepository.java
+package com.reward.repository;
+
+import com.reward.entity.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
+    
+    Optional<Customer> findByCustomerIdAndIsActiveTrue(Long customerId);
+    
+    boolean existsByCustomerIdAndIsActiveTrue(Long customerId);
+}
